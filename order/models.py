@@ -15,6 +15,7 @@ class Order(models.Model):
     address = models.CharField(max_length=128)
     delivery_finish = models.BooleanField(default=0)
     estimated_time = models.IntegerField(default=-1)
+    test = models.CharField(max_length=128)
 class OrderFood(models.Model):
     order = models.ForeignKey(Order,on_delete=models.CASCADE)
     food_name = models.CharField(max_length=64)
