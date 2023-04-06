@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'order'
+    'order',
+    'delivery',
+    'boss',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +79,16 @@ WSGI_APPLICATION = 'Order_Site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ims',
+        'USER' : 'admin',
+        'PASSWORD':"qwer1234",
+        "HOST": 'test-dev.cqyc40t044mf.us-east-1.rds.amazonaws.com',
+        'PORT':'3306',
+        'OPTIOPNS':{
+            'init_command' : "SET sql_mode = 'STRICT_TRANS_TABLES'"
+        }
+        
     }
 }
 
