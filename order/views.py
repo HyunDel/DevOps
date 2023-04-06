@@ -11,6 +11,7 @@ def shop(request):
         # shop = Shop.objects.all()
         # serializer = ShopSerializer(shop, many=True)
         # return JsonResponse(serializer.data, safe=False)
+        # tetst tes
 
         shop = Shop.objects.all()
         return render(request, 'order/shop_list.html', {'shop_list':shop})
